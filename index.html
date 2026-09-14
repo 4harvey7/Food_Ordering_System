@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickBite - Food Ordering</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="navbar">
+    <div class="logo">🍔 QuickBite</div>
+    <nav>
+        <button class="nav-btn active" data-section="menu">Menu</button>
+        <button class="nav-btn" data-section="cart">Cart <span id="cartCount">0</span></button>
+    </nav>
+</header>
+
+<main>
+    <section id="menuSection" class="section active-section">
+        <h1>What are you craving today?</h1>
+
+        <div class="filters" id="categoryFilter">
+            <button class="filter-btn active" data-cat="all">All</button>
+            <button class="filter-btn" data-cat="Main">Main</button>
+            <button class="filter-btn" data-cat="Sides">Sides</button>
+            <button class="filter-btn" data-cat="Drinks">Drinks</button>
+            <button class="filter-btn" data-cat="Dessert">Dessert</button>
+        </div>
+
+        <div id="menuGrid" class="menu-grid"></div>
+    </section>
+
+    <section id="cartSection" class="section">
+        <h2>Your Order</h2>
+        <div id="cartContent"></div>
+    </section>
+</main>
+
+<div id="toast" class="toast"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
